@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+}
+
+body {
+    background: url("../images/background.jpg") no-repeat fixed;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.85);
+    height: 90px;
+    width: 100%;
+    position: relative;
+}
+
+header h1 {
+    color: #fff;
+    padding-top: 10px;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+
+}
+
+header .logout {
+    background-color: rgb(255, 159, 47);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    width: 70px;
+    height: 66px;
+    padding-top: 3px;
+
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+header .logout i {
+    color: #ffffff;
+    font-size: 3.4em;
+}
+
+header .logout:hover {
+    background-color: rgb(255, 169, 94);
+}
+
+#container {
+    width: 80%;
+    min-width: 800px;
+    margin: 20px auto;
+
+}
+
+#container #AddTasks, #container #listTasks {
+    background-color: rgba(51, 51, 51, 0.85);
+    position: relative;
+    height: 600px;
+    width: 100%;
+}
+
+#container #listTasks {
+    margin-top: 30px;
+}
+
+#container #AddTasks h2 {
+    color: #fff;
+    padding-top: 10px;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+#with, #to, #availableMinutes {
+    background-color: rgb(255, 159, 47);
+    border-radius: 2px;
+    width: 100px;
+    height: 75px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    padding-top: 25px;
+    cursor: pointer;
+}
+
+#availableMinutes {
+    cursor: inherit;
+}
+
+.label, .labelAvailableMinutes {
+    color: white;
+    padding: 25px 19px;
+    font-size: 2em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+#with, #to, .label {
+    float: left;
+}
+.labelAvailableMinutes, #availableMinutes {
+    display: inline-block;
+}
+
+#availableMinutesBlock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#forms {
+
+    margin-top: 100px;
+    margin-left: 20px;
+}
+#duration {
+    width: 216px;
+}
+
+input {
+    background-color: rgb(255, 165, 65);
+    height: 70px;
+    color: #ffffff;
+    font-size: 2.5em;
+    padding: 0 5px;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+}
+
+
+input[type='text'] {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+input::-webkit-input-placeholder {
+    color: #e1e1e1;
+}
+input::-moz-placeholder {
+    color:#e1e1e1;
+}
+input:-moz-placeholder {
+    color:#e1e1e1;
+}
+input:-ms-input-placeholder {
+    color:#e1e1e1;
+}
+
+#addTaskSend {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #69e15c;
+    cursor: pointer;
+
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+#addTaskSend:hover {
+    background-color: #53ae47;
+}
+.clear {
+    clear: both;
+}
+
+
+
+/* list */
+
+ul li div, ul li button {
+    display: inline-block;
+}
+
+li {
+    background-color: rgba(255, 150, 115, 0.61);
+    margin-top: 10px;
+    height: 50px;
+}
+
+.edit, .delete {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.edit {
+    background-color: #ff900d;
+}
+
+.edit:active {
+    background-color: #ffbb2c;
+}
+
+.edit i {
+    color: #fff;
+    font-size: 35px;
+}
+
+.delete {
+    background-color: #aa0703;
+}
+
+.delete:active {
+    background-color: #db0803;
+}
+
+.delete i {
+    color: #fff;
+    font-size: 35px;
+}
+
+.control {
+    float: right;
+}
+
+.taskName {
+    color: #ffffff;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+.login {
+    color: #ffffff;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    margin-left: 5px;
+    position: absolute;
+    top: 19px;
+}
+
+.hours, .minutes {
+    display: inline-block;
+    background-color: rgba(51, 51, 51, 0.85);
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.remodal h1 {
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    margin-bottom: 20px;
+}
+
+.hours-list, .minutes-list {
+    margin: 15px auto;
+    width: 270px;
+}
+
+.hours-list li, .minutes-list li {
+    background-color: #ffb95b;
+    float: left;
+    width: 50px;
+    height: 43px;
+    margin: 2px 2px;
+
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
+    cursor: pointer;
+    padding-top: 7px;
+
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -ms-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.hours-list li:active, .minutes-list li:active {
+    background-color: #ffa62e;
+}
+
+.remodal-cancel, .remodal-confirm, .cancel-edit, .confirm-edit {
+    font-size: 1.3em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    padding: 10px 5px;
+}
+
+.hours-block {
+    margin-right: 30px;
+}
+
+.hours-block, .minutes-block {
+    text-align: center;
+    font-size: 1.1em;
+    color: #000000;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    width: 300px;
+    float: left;
+}
+
+.duration {
+    float: right;
+    margin-right: 30%;
+    margin-top: 9px;
+}
+
+.duration .text {
+    font-size: 1.3em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    color: #ffffff;
+}
+
+.duration i {
+    color: #ffffff;
+    font-size: 1.3em;
+}
+
+.noTasks {
+    color: #ffffff;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 1.4em;
+
+    text-align: center;
+}
+
+.TaskNameEdit, .durationEdit {
+    font-size: 1.2em;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.durationEdit {
+    width: 100px;
+
+}

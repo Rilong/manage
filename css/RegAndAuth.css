@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background: url("../images/background.jpg") no-repeat fixed;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.85);
+    height: 90px;
+    width: 100%;
+}
+
+header h1 {
+    color: #fff;
+    padding-top: 10px;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#container {
+    width: 40%;
+    min-width: 800px;
+    margin: 20px auto;
+
+}
+
+#container #auth{
+    background-color: rgba(51, 51, 51, 0.85);
+    width: 100%;
+    height: 327px;
+    margin-top: 100px;
+}
+
+#container #reg {
+    background-color: rgba(51, 51, 51, 0.85);
+    width: 100%;
+    height: 460px;
+    margin-top: 100px;
+}
+
+#container #auth h2, #container #reg h2 {
+    color: #fff;
+    padding-top: 10px;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+
+#userForm {
+     width: 280px;
+     margin: 20px auto;
+}
+
+.messageError {
+    display: none;
+    background-color: rgba(198, 0, 10, 0.6);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+}
+
+.messageErrorPHP {
+    background-color: rgba(198, 0, 10, 0.6);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+}
+
+.messageSuccess {
+    display: none;
+    background-color: rgba(29, 198, 23, 0.6);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+}
+
+.messages {
+    height: 30px;
+    width: 100%;
+}
+
+.noScript {
+    background-color: rgba(198, 0, 10, 0.6);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+    height: 40px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 5px;
+    position: fixed;
+    bottom: 0;
+}
+
+input {
+    background-color: rgb(255, 165, 65);
+    display: block;
+    height: 70px;
+    color: #ffffff;
+    font-size: 2.5em;
+    padding: 0 5px;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+}
+
+input[type='text'], input[type='password'] {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 280px;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+input[type='submit'], .linkBtn {
+    background-color: #77ae6b;
+    margin: 10px auto;
+    font-size: 1.8em;
+    width: 200px;
+    height: 42px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+input[name='checkLogin'] {
+    background-color: #ff765d;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
+    margin: 5px auto;
+    font-size: 0.8em;
+    width: 200px;
+
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+input[name='checkLogin']:hover {
+    background: #ffa694;
+}
+
+.linkBtn {
+    background-color: #ffae5d;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Roboto', Arial, Tahoma, sans-serif;
+}
+
+.linkBtn:hover {
+    background-color: #ffcc94;
+}
+
+input[type='submit']:hover {
+    background-color: #9ce48b;
+}
+
+#container #reg form #userForm input[type='submit'] {
+    width: 260px;
+}
+
+input::-webkit-input-placeholder {
+    color: #e1e1e1;
+}
+input::-moz-placeholder {
+    color:#e1e1e1;
+}
+input:-moz-placeholder {
+    color:#e1e1e1;
+}
+input:-ms-input-placeholder {
+    color:#e1e1e1;
+}
