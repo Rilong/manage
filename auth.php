@@ -41,6 +41,7 @@
     <meta charset="UTF-8">
     <title>Авторизація</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/RegAndAuth.css">
 </head>
 <body>

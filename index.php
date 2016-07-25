@@ -123,6 +123,12 @@
         <button data-remodal-action="cancel" class="cancel-edit">Скасувати</button>
         <button data-remodal-action="confirm" class="confirm-edit">Підтвердити</button>
     </div>
+    <noscript>
+        <div class="noScript">
+            <i class="icon-error-alt"></i>
+            Помилка! увімкніть будь-ласка JavaScript у своєму веб-переглядачі, робота сайту буде некоректна!
+        </div>
+    </noscript>
     <!--===================================Remodal=====================================-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/remodal.min.js"></script>
