@@ -10,6 +10,7 @@
 
     if(isset($_POST["sendAuth"])) {
         $mysqli = new mysqli($config["db_host"], $config["db_user"], $config["db_password"], $config["db_name"]);
+        $mysqli->set_charset("utf8");
         $result_set = $mysqli->query("SELECT * FROM `users` WHERE `login`='$login'");
         $user = $result_set->fetch_assoc();
 

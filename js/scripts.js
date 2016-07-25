@@ -193,7 +193,7 @@
                   $("#availableMinutes").html(result);
                   if($(".task").length == 0)
                      $("#listTasks").prepend("<div class=\"noTasks\">У вас немає завдань!</div>");
-               }, 810);
+               }, 801);
             }
          });
       }else if (action == "edit") {

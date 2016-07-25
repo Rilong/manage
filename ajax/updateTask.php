@@ -1,7 +1,7 @@
 <?php
     $config = require "../system/config.php";
     $mysqli = new mysqli($config["db_host"],$config["db_user"], $config["db_password"], $config["db_name"]);
-
+    $mysqli->set_charset("utf8");
     $id = (int) $_POST["id"];
     $time = (int) $_POST["time"];
     $name = $_POST["name"];

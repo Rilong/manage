@@ -13,6 +13,7 @@
 
     if (isset($_POST["sendReg"])) {
         $mysqli = new mysqli($config["db_host"], $config["db_user"], $config["db_password"], $config["db_name"]);
+        $mysqli->set_charset("utf8");
         $loginDB = $mysqli->query("SELECT * FROM `users` WHERE `login`='$login'");
         $emailDB = $mysqli->query("SELECT * FROM `users` WHERE `email`='$email'");
         if (strlen($login) == 0)

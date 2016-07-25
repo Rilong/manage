@@ -1,6 +1,7 @@
 <?php
     $config = require "../system/config.php";
     $mysqli = new mysqli($config["db_host"],$config["db_user"], $config["db_password"], $config["db_name"]);
+    $mysqli->set_charset("utf8");
     $TimeMinutes = (int) $_POST["TimeMinutes"];
     $Time = trim($_POST["Time"]);
     $elementId = trim($_POST["elementId"]);

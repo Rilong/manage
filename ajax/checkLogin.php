@@ -1,7 +1,7 @@
 <?php
     $config = require_once  "../system/config.php";
     $mysqli = new mysqli($config["db_host"],$config["db_user"], $config["db_password"], $config["db_name"]);
-
+    $mysqli->set_charset("utf8");
     $login = $_POST["login"];
 
     $result_set = $mysqli->query("SELECT * FROM `users` WHERE `login` = '$login'");

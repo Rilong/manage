@@ -5,6 +5,7 @@
     }
     $config = require("system/config.php");
     $mysqli = new mysqli($config["db_host"],$config["db_user"], $config["db_password"], $config["db_name"]);
+    $mysqli->set_charset("utf8");
     $result_set = $mysqli->query("SELECT * FROM `users` WHERE `login` = '".$_COOKIE["userLogin"]."'");
     $user = $result_set->fetch_assoc();
     $result_set->close();

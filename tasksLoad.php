@@ -1,9 +1,10 @@
 <?php
-$config = require("system/config.php");
-$mysqli = new mysqli($config["db_host"],$config["db_user"], $config["db_password"], $config["db_name"]);
-$result_set = $mysqli->query("SELECT * FROM `users` WHERE `login` = '".$_COOKIE["userLogin"]."'");
-$user = $result_set->fetch_assoc();
-$result_set = $mysqli->query("SELECT * FROM `tasks` WHERE `userid` = {$user["id"]}");
+    $config = require("system/config.php");
+    $mysqli = new mysqli($config["db_host"],$config["db_user"], $config["db_password"], $config["db_name"]);
+    $mysqli->set_charset("utf8");
+    $result_set = $mysqli->query("SELECT * FROM `users` WHERE `login` = '".$_COOKIE["userLogin"]."'");
+    $user = $result_set->fetch_assoc();
+    $result_set = $mysqli->query("SELECT * FROM `tasks` WHERE `userid` = {$user["id"]}");
 ?>
 <?php if ($result_set->num_rows != 0) {?>
 <ul id="list">
