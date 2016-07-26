@@ -8,3 +8,4 @@
     mysqli_query($mysqli, "DELETE FROM `tasks` WHERE `id`='$idToInt'");
     mysqli_query($mysqli, "UPDATE `users` SET `time` = '$time' WHERE `login` = '".$_COOKIE["userLogin"]."'");
     mysqli_close($mysqli);
+    echo "done";

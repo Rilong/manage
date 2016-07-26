@@ -139,7 +139,7 @@
       var durationTask = $("#duration").val();
       var time = $("#availableMinutes");
       result = Number(time.html()) - Number(durationTask);
-      if (taskName.length != 0 && durationTask.match(/[0-9]/)) {
+      if (taskName.length != 0 && durationTask.match(/^\d+$/)) {
          $("#listTasks").html("");
          $.ajax({
             url: "../ajax/addTask.php",
@@ -186,14 +186,15 @@
             type: "POST",
             dataType: "html",
             data: {id: id, time: result},
-            success: function () {
-               $(element.parents(".task")).slideUp(800);
-               setTimeout(function () {
-                  $(element.parents(".task")).remove();
-                  $("#availableMinutes").html(result);
-                  if($(".task").length == 0)
-                     $("#listTasks").prepend("<div class=\"noTasks\">У вас немає завдань!</div>");
-               }, 801);
+            success: function (data) {
+               if (data == "done") {
+                  $(element.parents(".task")).slideUp(850, function () {
+                     $(element.parents(".task")).remove();
+                     $("#availableMinutes").html(result);
+                     if ($(".task").length == 0)
+                        $("#listTasks").prepend("<div class=\"noTasks\">У вас немає завдань!</div>");
+                  });
+               }else return false;
             }
          });
       }else if (action == "edit") {
