@@ -47,6 +47,11 @@
         if (strlen($message) == 0) {
             $mysqli->query("INSERT INTO `users` (`login`, `name`, `password`, `email`, `regdate`, `time`) VALUES ('$login', '$name', '".md5($config["secret"].$password)."', '$email', '".time()."', '840')");
             $mysqli->close();
+
+            setcookie("userLogin", $login, time() + 60 * 60 * 24 * 30);
+            setcookie("userPassword", md5($config["secret"].$password), time() + 60 * 60 * 24 * 30);
+            header("Location: index.php");
+            exit();
         }
     }
 
